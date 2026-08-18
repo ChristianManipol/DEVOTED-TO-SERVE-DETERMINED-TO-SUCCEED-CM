@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 70px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid #111;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: opacity .3s ease;
+}
+
+.nav-links a:hover {
+    opacity: .45;
+}
+
+.cover-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 100px 30px 60px;
+    text-align: center;
+    border-bottom: 1px solid #111;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.cover-page.show,
+.portfolio-section.show,
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.school-brand {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.cover-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform .5s ease;
+}
+
+.cover-logo:hover {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.university-name {
+    font-family: "Times New Roman", serif;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: .95;
+    color: #8c2038;
+}
+
+.university-of {
+    font-size: clamp(22px, 3vw, 32px);
+}
+
+.batangas {
+    font-size: clamp(34px, 5vw, 50px);
+    letter-spacing: -3px;
+}
+
+.cover-line {
+    width: min(500px, 80vw);
+    height: 2px;
+    margin: 35px auto 25px;
+    background: #111;
+}
+
+.cover-tagline {
+    max-width: 900px;
+    margin: 50px 0 60px;
+    font-size: clamp(28px, 6vw, 70px);
+    line-height: .95;
+    font-weight: 700;
+}
+
+.cover-name {
+    font-size: 22px;
+}
+
+.cover-course {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.portfolio-section {
+    padding: 110px 8% 90px;
+    border-bottom: 1px solid #111;
+    scroll-margin-top: 70px;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.section-header {
+    margin-bottom: 70px;
+}
+
+.section-number {
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    max-width: 1000px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px, 7vw, 50px);
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.project-row,
+.project-row:nth-child(even) {
+    display: grid;
+    grid-template-columns: minmax(300px, 1.25fr) minmax(260px, .75fr);
+    align-items: center;
+    gap: 8%;
+    min-height: 360px;
+}
+
+.project-row .project-image,
+.project-row:nth-child(even) .project-image {
+    order: 1;
+}
+
+.project-row .project-description,
+.project-row:nth-child(even) .project-description {
+    order: 2;
+}
+
+.project-image {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    background: #111;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease, filter .7s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.06);
+    filter: brightness(.8);
+}
+
+.project-number {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.project-description h2 {
+    margin-bottom: 20px;
+    font-size: clamp(24px, 3vw, 42px);
+    font-weight: 600;
+}
+
+.project-description p {
+    max-width: 520px;
+    font-size: clamp(15px, 1.5vw, 20px);
+    line-height: 1.7;
+    color: #444;
+}
+
+footer {
+    min-height: 55vh;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    color: white;
+    text-align: center;
+    background: #111;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+footer h2 {
+    margin-bottom: 25px;
+    font-size: clamp(40px, 8vw, 100px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+footer p {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        min-height: 60px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .school-brand {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .university-name {
+        text-align: center;
+    }
+
+    .cover-logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .portfolio-section {
+        padding: 90px 20px 60px;
+    }
+
+    .section-header {
+        margin-bottom: 45px;
+    }
+
+    .section-title {
+        font-size: clamp(36px, 12vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .project-list {
+        gap: 55px;
+    }
+
+    .project-row,
+    .project-row:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        min-height: auto;
+    }
+
+    .project-row .project-image,
+    .project-row:nth-child(even) .project-image {
+        order: 1;
+    }
+
+    .project-row .project-description,
+    .project-row:nth-child(even) .project-description {
+        order: 2;
+    }
+
+    .project-image {
+        height: 280px;
+    }
+
+    .project-description p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    footer h2 {
+        font-size: clamp(38px, 12vw, 70px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .cover-page,
+    .portfolio-section,
+    footer {
+        opacity: 1;
+        transform: none;
+    }
+}

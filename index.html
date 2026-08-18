@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Manipol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">CHRISTIAN MANIPOL</div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#works">01</a></li>
+            <li><a href="#branding">02</a></li>
+            <li><a href="#digital">03</a></li>
+            <li><a href="#social">04</a></li>
+            <li><a href="#posters">05</a></li>
+            <li><a href="#photo">06</a></li>
+            <li><a href="#final">07</a></li>
+        </ul>
+    </nav>
+
+    <section class="cover-page" id="home">
+        <div class="cover-content">
+            <div class="school-brand">
+                <img src="https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/UB%20-%20Copy.png"
+                     alt="University of Batangas Logo"
+                     class="cover-logo">
+                <div class="university-name">
+                    <div class="university-of">UNIVERSITY OF</div>
+                    <div class="batangas">BATANGAS</div>
+                </div>
+            </div>
+
+            <div class="cover-line"></div>
+
+            <p class="cover-tagline">DEVOTED TO SERVE, DETERMINED TO SUCCEED</p>
+            <h2 class="cover-name">Christian Manipol</h2>
+            <p class="cover-course">BSIE-1AS</p>
+        </div>
+    </section>
+
+    <main id="portfolio"></main>
+
+    <footer>
+        <h2>DEVOTED TO SERVE,<br>DETERMINED TO SUCCEED</h2>
+        <p>CHRISTIAN MANIPOL · BSIE-1AS</p>
+        <p>UNIVERSITY OF BATANGAS</p>
+    </footer>
+
+    <script>
+        const sections = [
+            {
+                id: "works",
+                number: "01 / 07",
+                title: "Faith in God",
+                description: "These pictures show the importance of trusting God's plans. Whenever you face a problem, you can turn to Him and pray because He listens to you. When you receive a blessing, remember to pray and thank God for it."
+            },
+            {
+                id: "branding",
+                number: "02 / 07",
+                title: "Love of Wisdom",
+                description: "These pictures represent the value of learning, understanding and applying wisdom in everyday life."
+            },
+            {
+                id: "digital",
+                number: "03 / 07",
+                title: "Service to Fellowmen",
+                description: "These pictures show how people help one another through community service, cleanliness, teamwork and support for those in need."
+            },
+            {
+                id: "social",
+                number: "04 / 07",
+                title: "Builder and Innovator of Knowledge",
+                description: "These pictures represent creativity, continuous learning and the importance of sharing knowledge with others."
+            },
+            {
+                id: "posters",
+                number: "05 / 07",
+                title: "Efficient Professional and Effective Communicator",
+                description: "These pictures show professionalism, confidence, clear communication and the ability to present ideas effectively."
+            },
+            {
+                id: "photo",
+                number: "06 / 07",
+                title: "Social, Moral and Global-Minded Citizen",
+                description: "These pictures represent responsibility, respect, awareness and participation as a responsible member of society."
+            },
+            {
+                id: "final",
+                number: "07 / 07",
+                title: "Transformed Lifelong Learner",
+                description: "These pictures show personal growth, adaptability and the willingness to continue learning throughout life."
+            }
+        ];
+
+        const imageSets = {
+            works: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/FIG.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/FIG2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/FIG3.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/FIG1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/FIG4.jpg"            ],
+            branding: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI3.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/4.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI2.jpg"
+            ],
+            digital: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/STF2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/STF4.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/STF3.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/STF1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/STF.jpg"
+            ],
+            social: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/4.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/EPEC1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/EPEC2.jpg"
+            ],
+            posters: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/3.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/6.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/4.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI.jpg"
+            ],
+            photo: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/EPEC2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/6.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI.jpg"
+            ],
+            final: [
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/EPEC1.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/EPEC2.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/BI4.jpg",
+                "https://uploads.onecompiler.io/44xkjdnrb/44xkq8fme/1.jpg"
+            ]
+        };
+
+        const portfolio = document.getElementById("portfolio");
+
+        sections.forEach(section => {
+            const portfolioSection = document.createElement("section");
+            portfolioSection.className = "portfolio-section";
+            portfolioSection.id = section.id;
+
+            const projects = imageSets[section.id].map((image, index) => `
+                <article class="project-row">
+                    <div class="project-image">
+                        <img src="${image}" alt="${section.title} photo ${index + 1}">
+                        <span class="project-number">${String(index + 1).padStart(2, "0")}</span>
+                    </div>
+
+                    <div class="project-description">
+                        <p>${section.description}</p>
+                    </div>
+                </article>
+            `).join("");
+
+            portfolioSection.innerHTML = `
+                <header class="section-header">
+                    <div class="section-number">${section.number}</div>
+                    <h1 class="section-title">${section.title}</h1>
+                </header>
+                <div class="project-list">${projects}</div>
+            `;
+
+            portfolio.appendChild(portfolioSection);
+        });
+
+        const animatedElements = document.querySelectorAll(
+            ".cover-page, .portfolio-section, footer"
+        );
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("show", entry.isIntersecting);
+            });
+        }, { threshold: 0.15 });
+
+        animatedElements.forEach(element => observer.observe(element));
+    </script>
+</body>
+</html>
