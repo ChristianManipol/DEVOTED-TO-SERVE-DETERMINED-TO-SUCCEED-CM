@@ -28,6 +28,11 @@ body {
     align-items: center;
     background: rgba(0, 0, 0, 0.92);
     border-bottom: 1px solid #111;
+    transition: background 0.3s ease;
+}
+
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.98);
 }
 
 .logo {
@@ -48,11 +53,20 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
     opacity: 0.45;
+    transform: translateY(-2px);
+}
+
+.cover-page,
+.portfolio-section,
+footer {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .cover-page {
@@ -62,8 +76,6 @@ body {
     padding: 100px 30px 60px;
     text-align: center;
     border-bottom: 1px solid #111;
-    opacity: 1;
-    transform: none;
     font-family: "Inter", Arial, sans-serif;
 }
 
@@ -143,8 +155,6 @@ footer.show {
     padding: 110px 8% 90px;
     border-bottom: 1px solid #111;
     scroll-margin-top: 70px;
-    opacity: 1;
-    transform: none;
 }
 
 .section-header {
@@ -179,6 +189,30 @@ footer.show {
     align-items: center;
     gap: 8%;
     min-height: 360px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.portfolio-section.show .project-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-section.show .project-row:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.portfolio-section.show .project-row:nth-child(3) {
+    transition-delay: 0.16s;
+}
+
+.portfolio-section.show .project-row:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+.portfolio-section.show .project-row:nth-child(5) {
+    transition-delay: 0.32s;
 }
 
 .project-image {
@@ -244,8 +278,6 @@ footer {
     color: #fff;
     text-align: center;
     background: #111;
-    opacity: 1;
-    transform: none;
 }
 
 footer h2 {
@@ -344,6 +376,7 @@ footer p {
 
     .cover-page,
     .portfolio-section,
+    .project-row,
     footer {
         opacity: 1;
         transform: none;
