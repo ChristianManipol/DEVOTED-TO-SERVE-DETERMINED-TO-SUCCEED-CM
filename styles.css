@@ -31,10 +31,10 @@ body {
 }
 
 .logo {
+    color: #fff;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #fff;
 }
 
 .nav-links {
@@ -44,15 +44,15 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
-    opacity: .45;
+    opacity: 0.45;
 }
 
 .cover-page {
@@ -62,9 +62,8 @@ body {
     padding: 100px 30px 60px;
     text-align: center;
     border-bottom: 1px solid #111;
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity .8s ease, transform .8s ease;
+    opacity: 1;
+    transform: none;
     font-family: "Inter", Arial, sans-serif;
 }
 
@@ -91,7 +90,7 @@ footer.show {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
 }
 
 .cover-logo:hover {
@@ -99,11 +98,11 @@ footer.show {
 }
 
 .university-name {
+    color: #8c2038;
     font-family: "Times New Roman", serif;
     text-align: left;
     text-transform: uppercase;
-    line-height: .95;
-    color: #8c2038;
+    line-height: 0.95;
 }
 
 .university-of {
@@ -126,7 +125,7 @@ footer.show {
     max-width: 900px;
     margin: 50px 0 60px;
     font-size: clamp(28px, 6vw, 70px);
-    line-height: .95;
+    line-height: 0.95;
     font-weight: 700;
 }
 
@@ -144,9 +143,8 @@ footer.show {
     padding: 110px 8% 90px;
     border-bottom: 1px solid #111;
     scroll-margin-top: 70px;
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity .8s ease, transform .8s ease;
+    opacity: 1;
+    transform: none;
 }
 
 .section-header {
@@ -164,7 +162,7 @@ footer.show {
     max-width: 1000px;
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(32px, 7vw, 50px);
-    line-height: .95;
+    line-height: 0.95;
     text-transform: uppercase;
     letter-spacing: -3px;
 }
@@ -175,23 +173,12 @@ footer.show {
     gap: 70px;
 }
 
-.project-row,
-.project-row:nth-child(even) {
+.project-row {
     display: grid;
-    grid-template-columns: minmax(300px, 1.25fr) minmax(260px, .75fr);
+    grid-template-columns: minmax(300px, 1.25fr) minmax(260px, 0.75fr);
     align-items: center;
     gap: 8%;
     min-height: 360px;
-}
-
-.project-row .project-image,
-.project-row:nth-child(even) .project-image {
-    order: 1;
-}
-
-.project-row .project-description,
-.project-row:nth-child(even) .project-description {
-    order: 2;
 }
 
 .project-image {
@@ -206,12 +193,12 @@ footer.show {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .7s ease, filter .7s ease;
+    transition: transform 0.7s ease, filter 0.7s ease;
 }
 
 .project-image:hover img {
     transform: scale(1.06);
-    filter: brightness(.8);
+    filter: brightness(0.8);
 }
 
 .project-number {
@@ -224,17 +211,26 @@ footer.show {
     letter-spacing: 2px;
 }
 
-.project-description h2 {
-    margin-bottom: 20px;
-    font-size: clamp(24px, 3vw, 42px);
-    font-weight: 600;
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-description h3 {
+    max-width: 520px;
+    margin-bottom: 18px;
+    color: #111;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(23px, 2.5vw, 25px);
+    line-height: 1.1;
 }
 
 .project-description p {
     max-width: 520px;
-    font-size: clamp(15px, 1.5vw, 20px);
-    line-height: 1.7;
     color: #444;
+    font-size: clamp(15px, 1.5vw, 15px);
+    line-height: 1.7;
 }
 
 footer {
@@ -245,12 +241,11 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 18px;
-    color: white;
+    color: #fff;
     text-align: center;
     background: #111;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .8s ease, transform .8s ease;
+    opacity: 1;
+    transform: none;
 }
 
 footer h2 {
@@ -310,8 +305,7 @@ footer p {
         gap: 55px;
     }
 
-    .project-row,
-    .project-row:nth-child(even) {
+    .project-row {
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -319,18 +313,14 @@ footer p {
         min-height: auto;
     }
 
-    .project-row .project-image,
-    .project-row:nth-child(even) .project-image {
-        order: 1;
-    }
-
-    .project-row .project-description,
-    .project-row:nth-child(even) .project-description {
-        order: 2;
-    }
-
     .project-image {
+        width: 100%;
         height: 280px;
+    }
+
+    .project-description h3 {
+        margin-bottom: 12px;
+        font-size: 25px;
     }
 
     .project-description p {
