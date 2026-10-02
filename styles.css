@@ -64,8 +64,8 @@ body {
 .cover-page,
 .portfolio-section,
 footer {
-    opacity: 0;
-    transform: translateY(24px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -183,14 +183,47 @@ footer.show {
     gap: 70px;
 }
 
+.assignment-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.assignment-card {
+    grid-column: span 2;
+}
+
+.assignment-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.assignment-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.assignment-image {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f0f0f0;
+}
+
+.assignment-card h3 {
+    margin-top: 14px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+}
+
 .project-row {
     display: grid;
     grid-template-columns: minmax(300px, 1.25fr) minmax(260px, 0.75fr);
     align-items: center;
     gap: 8%;
     min-height: 360px;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -335,6 +368,26 @@ footer p {
 
     .project-list {
         gap: 55px;
+    }
+
+    .assignment-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .assignment-card,
+    .assignment-card:nth-child(4) {
+        grid-column: auto;
+    }
+
+    .assignment-card:nth-child(5) {
+        grid-column: 1 / -1;
+        width: calc(50% - 12px);
+        justify-self: center;
+    }
+
+    .assignment-image {
+        min-height: 150px;
     }
 
     .project-row {
